@@ -8,5 +8,5 @@ import datetime
 
 BASE_URL = "https://gs.amac.org.cn/amac-infodisc/res/pof/manager/index.html"
 REGISTER_DATE = datetime.date(2013, 1, 1)
-CATCH_PATH = "./cache/fund_data.dat"
-EXCEL_PATH = "./data/基金数据.xlsx"
+CATCH_PATH = "./fund_data.dat"
+EXCEL_PATH = "./基金数据.xlsx"
