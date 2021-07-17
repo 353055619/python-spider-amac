@@ -20,3 +20,4 @@
 2. python catch_to_data.py -> *将序列化的数据写入excel*
 
 **config文件设置程序参数**
+**别忘了配置selenium哦**
