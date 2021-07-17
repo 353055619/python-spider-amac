@@ -18,4 +18,5 @@
 ### 程序入口
 1. python data_to_catch.py -> *爬取数据，并序列化*
 2. python catch_to_data.py -> *将序列化的数据写入excel*
+
 **config文件设置程序参数**
