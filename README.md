@@ -14,3 +14,8 @@
 2. 利用pickle序列化；
 3. 利用pickle反序列化，处理数据写入excel；
 > 2和3步是为了减少爬取次数
+
+### 程序入口
+1. python data_to_catch.py -> *爬取数据，并序列化*
+2. python catch_to_data.py -> *将序列化的数据写入excel*
+**config文件设置程序参数**
