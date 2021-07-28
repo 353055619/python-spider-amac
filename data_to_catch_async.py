@@ -54,11 +54,10 @@ class Spider(object):
             # time.sleep(0.5) 新窗口会在等待子窗口内容提取中加载完毕
             self.loop.run_until_complete(asyncio.wait(tasks))
 
-            print(f"\rPage {page + 1} \ {self.pageLength}",end="",flush=True)
+            print(f"\rPage {page + 1} \ {self.pageLength}", end="", flush=True)
 
         endTime = datetime.datetime.now()
-        print(f"Total time cost: {(endTime-startTime).seconds} s")
-
+        print(f"Total time cost: {(endTime - startTime).seconds} s")
 
     async def _getInfo(self, handle: str) -> None:
         """

@@ -16,8 +16,9 @@
 > 2和3步是为了减少爬取次数
 
 ### 程序入口
-1. python data_to_catch.py -> *爬取数据，并序列化*
-2. python catch_to_data.py -> *将序列化的数据写入excel*
+1. `python data_to_catch_async.py` -> *爬取数据，并序列化*
+   > 如果失败可以使用 `python data_to_catch.py` 重试 （*慢50%*）
+2. `python catch_to_data.py` -> *将序列化的数据写入excel*
 
 **config文件设置程序参数**
 
