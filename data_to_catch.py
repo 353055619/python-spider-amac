@@ -4,6 +4,7 @@ Version: 1.0
 Author: 魏苏航
 email: godw2017@163.com
 """
+import datetime
 import pickle
 import re
 import time
@@ -38,11 +39,12 @@ class Spider(object):
         """
         print("Browse...")
         for i in range(self.pageLength):
-
+            startTime = datetime.datetime.now()
             name_a = self.driver.find_element_by_id("managerList").find_elements_by_tag_name("a")
 
             for index, a in enumerate(name_a):
                 try:
+
                     a.click()
 
                     handles = self.driver.window_handles
@@ -72,9 +74,12 @@ class Spider(object):
                     self.driver.close()
                     self.driver.switch_to.window(handles[0])
 
-                    print(f"\rPage {i + 1} \ {self.pageLength}: line {index + 1} \ {len(name_a)}", end="", flush=True)
+                    # print(f"\rPage {i + 1} \ {self.pageLength}: line {index + 1} \ {len(name_a)}", end="", flush=True)
                 except Exception as e:
                     print(e)
+
+            endTime = datetime.datetime.now()
+
             self.driver.find_element_by_class_name("next").click()
             time.sleep(0.5)  # 等待界面加载
 
